@@ -1,19 +1,14 @@
-import { Download, Menu, X } from 'lucide-react'
+import React, { useState } from 'react'
+import { Download, Menu, X, LayoutGrid } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
 
-const Header = () => {
+const Header = ({ openMenu }: { openMenu: () => void }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate();
 
-  const handleNavigate = (path: string) => {
-    navigate(path);
-    setIsMenuOpen(false);
-  }
-
   const handleScroll = (sectionId: string) => {
-    navigate('/home');
+    navigate('/');
     setTimeout(() => {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
@@ -21,11 +16,11 @@ const Header = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/30 dark:bg-zinc-900/30 backdrop-blur-lg z-50 border-b border-white/20 dark:border-zinc-800/20">
+    <header className="fixed top-0 left-0 right-0 bg-white/30 dark:bg-zinc-900/30 backdrop-blur-lg z-40 border-b border-white/20 dark:border-zinc-800/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/home" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="bg-black text-white px-2 py-1 text-sm font-bold">
               FM
             </div>
@@ -48,6 +43,9 @@ const Header = () => {
               <span>RESUME</span>
             </button>
             <ThemeToggle />
+            <button onClick={openMenu} className="p-2 border border-gray-300 dark:border-zinc-700 rounded hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors">
+              <LayoutGrid size={16} />
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,6 +69,9 @@ const Header = () => {
                   <span>RESUME</span>
                 </button>
                 <ThemeToggle />
+                <button onClick={openMenu} className="p-2 border border-gray-300 dark:border-zinc-700 rounded hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors">
+                    <LayoutGrid size={16} />
+                </button>
               </div>
             </nav>
           </div>
