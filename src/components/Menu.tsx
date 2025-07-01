@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, User, Code, Briefcase, Mail, Download, Clock } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
@@ -53,23 +53,39 @@ const Menu = () => {
     { name: 'Theme', icon: <ThemeToggle /> },
     { name: 'Clock', icon: <Clock />, nameComponent: <span className="font-mono text-lg">{time}</span> },
   ];
+  
+  const gridOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-  const gridOrder = [0, 1, 2, 4, 5, 3, 6, 7, 8];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1 },
+  };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-[#030712] text-black dark:text-white">
       <motion.div 
         className="grid grid-cols-3 w-full max-w-2xl aspect-square"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
         {gridOrder.map(i => {
           const item = menuItems[i];
           return (
             <motion.div
               key={item.name}
-              whileHover={{ scale: 1.05 }}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, zIndex: 10 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center border border-gray-300 dark:border-zinc-800"
             >
