@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
 import { Download, Menu as MenuIcon, X, LayoutGrid } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleScrollTo = (sectionId: string) => {
-    // If we're not on the home page, navigate there first
-    if (location.pathname !== '/home') {
-      navigate('/home', { state: { sectionId } });
-    } else {
-      // If we are already on the home page, just scroll
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+    navigate('/home', { state: { sectionId } });
     setIsMobileMenuOpen(false);
   };
 
@@ -54,7 +44,7 @@ const Header = () => {
             {isMobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
           </button>
         </div>
-        
+
         {isMobileMenuOpen && (
              <div className="md:hidden py-4 border-t border-gray-200 dark:border-zinc-800">
                 <nav className="flex flex-col space-y-4">
