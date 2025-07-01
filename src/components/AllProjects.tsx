@@ -46,7 +46,7 @@ const AllProjects = () => {
     <div className="py-20 bg-white dark:bg-[#030712]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <Link to="/" className="inline-flex items-center text-lg font-semibold text-black dark:text-white bg-gray-200 dark:bg-zinc-800 px-6 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-700 transition-colors">
+          <Link to="/home" className="inline-flex items-center text-lg font-semibold text-black dark:text-white bg-gray-200 dark:bg-zinc-800 px-6 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-700 transition-colors">
             <ArrowLeft size={20} className="mr-2" />
             Back to Home
           </Link>
