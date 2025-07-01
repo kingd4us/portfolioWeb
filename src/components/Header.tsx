@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Download, Menu as MenuIcon, X, LayoutGrid } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import { Link, useNavigate } from 'react-router-dom';

@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, User, Code, Briefcase, Mail, Download, Clock, X, Github, Linkedin } from 'lucide-react';
+import { Home, User, Code, Briefcase, Mail, Download, X, Github, Linkedin } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import { useTheme } from './theme-provider';
 
 const Menu = () => {
-  const [time, setTime] = useState('');
+  // Removed unused time state
   const navigate = useNavigate();
   const { theme } = useTheme();
 
@@ -14,9 +13,7 @@ const Menu = () => {
     navigate(path, { state: { sectionId } });
   };
 
-  useEffect(() => {
-    // ... (time fetching logic remains the same)
-  }, []);
+  // Removed unused useEffect for time fetching logic
 
   const menuItems = [
     { name: 'Home', icon: <Home size={32} />, action: () => handleNavigate('/home', 'home') },

@@ -2,19 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, Github, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
+import myImage from '../assets/scrapper.png'; // Adjust the path as necessary
 
 const AllProjects = () => {
   const projects = [
     {
       category: 'DEVELOPMENT',
       year: '2024',
-      title: 'SecureShop Platform',
-      description: 'Full-stack e-commerce platform with advanced security features, payment integration, and real-time inventory management.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Cybersecurity Paper Downloader',
+      description: 'This web application simplifies cybersecurity research by allowing users to easily search for and download academic papers from arXiv, providing quick access to titles, authors, and direct PDF links.',
+      technologies: ['Flask', 'HTML+CSS', 'Docker', 'arXiv API'],
+      image: myImage,
       links: {
         demo: '#',
-        github: '#'
+        github: 'https://github.com/kingd4us/webScrapper.git'
       }
     },
     {

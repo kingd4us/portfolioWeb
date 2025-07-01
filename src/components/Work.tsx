@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom'
 import { ExternalLink, Github } from 'lucide-react'
 import { motion } from 'framer-motion'
+import myImage from '../assets/scrapper.png' // Adjust the path as necessary
 
 const Work = () => {
   const projects = [
     {
       category: 'DEVELOPMENT',
       year: '2024',
-      title: 'SecureShop Platform',
-      description: 'Full-stack e-commerce platform with advanced security features, payment integration, and real-time inventory management.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Cybersecurity Paper Downloader',
+      description: 'This web application simplifies cybersecurity research by allowing users to easily search for and download academic papers from arXiv, providing quick access to titles, authors, and direct PDF links.',
+      technologies: ['Flask', 'HTML+CSS', 'Docker', 'arXiv API'],
+      image: myImage,
       links: {
         demo: '#',
-        github: '#'
+        github: 'https://github.com/kingd4us/webScrapper.git'
       }
     },
     {
@@ -96,7 +97,7 @@ const Work = () => {
                     </div>
                     <div className="flex items-center justify-end space-x-6">
                       <a href={project.links.demo} className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"><ExternalLink size={20} /></a>
-                      <a href={project.links.github} className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"><Github size={20} /></a>
+                      <a href={project.links.github} className="_blank text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors" target='_blank'><Github size={20} /></a>
                     </div>
                   </div>
                 </div>
