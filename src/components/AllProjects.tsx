@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
-import { ExternalLink, Github, ArrowLeft } from 'lucide-react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ExternalLink, Github, ArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const AllProjects = () => {
   const projects = [
@@ -40,7 +41,7 @@ const AllProjects = () => {
         github: '#'
       }
     }
-  ]
+  ];
 
   return (
     <div className="py-20 bg-white dark:bg-[#030712]">
@@ -54,7 +55,7 @@ const AllProjects = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+            {projects.map((project, index) => (
              <motion.div
               key={index}
               whileHover={{ y: -8 }}
@@ -97,7 +98,7 @@ const AllProjects = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AllProjects
+export default AllProjects;
