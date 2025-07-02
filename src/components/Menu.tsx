@@ -105,9 +105,9 @@ const Menu = () => {
       </motion.div>
 
       <motion.div variants={itemVariants} className="absolute bottom-8 right-8 flex space-x-6 text-black dark:text-white">
-        <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400"><Github size={24} /></a>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400"><Linkedin size={24} /></a>
-        <a href="mailto:firdaus.manalu@email.com" className="hover:text-gray-600 dark:hover:text-gray-400"><Mail size={24} /></a>
+        <a href="github.com/kingd4us" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400"><Github size={24} /></a>
+        <a href="linkedin.com/firdaus-manalu" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400"><Linkedin size={24} /></a>
+        <a href="mailto:fmanalu900@gmail.com" className="hover:text-gray-600 dark:hover:text-gray-400"><Mail size={24} /></a>
       </motion.div>
     </motion.div>
   );

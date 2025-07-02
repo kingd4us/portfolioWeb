@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Server, Database, GitBranch, Box } from 'lucide-react';
+import { Code, Database, GitBranch, Box } from 'lucide-react';
 
 // Custom SVG icons for cybersecurity tools for a clean, consistent look
 const skillIcons: { [key: string]: React.ReactNode } = {
