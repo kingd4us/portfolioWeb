@@ -1,3 +1,5 @@
+import myImage from '../assets/me.png';
+
 const About = () => {
   return (
     <section id="about" className="py-20 bg-white dark:bg-[#030712] border-b border-gray-200 dark:border-zinc-800">
@@ -23,7 +25,7 @@ const About = () => {
                   <span className="w-2 h-2 bg-black dark:bg-white mr-3"></span>
                   Education
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 ml-5">Bachelor's in Information Technology</p>
+                <p className="text-gray-600 dark:text-gray-400 ml-5">Pursuing Bachelor's degree in President University</p>
               </div>
 
               <div>
@@ -47,7 +49,7 @@ const About = () => {
           {/* Right Image */}
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800" 
+              src={myImage} 
               alt="Developer working" 
               className="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
             />

@@ -1,49 +1,109 @@
-import { motion } from 'framer-motion'
-import { Code, Shield, Server, Pilcrow, Network } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Code, Server, Database, GitBranch, Box } from 'lucide-react';
 
-const skillIcons = {
-  'React & TypeScript': <Code size={24} className="text-blue-500" />,
-  'Node.js (Express)': <Server size={24} className="text-green-500" />,
-  'Python (Flask)': <Pilcrow size={24} className="text-yellow-500" />,
-  'Web Security (OWASP)': <Shield size={24} className="text-red-500" />,
-  'Network Security': <Network size={24} className="text-indigo-500" />,
+// Custom SVG icons for cybersecurity tools for a clean, consistent look
+const skillIcons: { [key: string]: React.ReactNode } = {
+  'Python': <Code size={24} className="text-yellow-500" />,
+  'React.js': <Code size={24} className="text-blue-500" />,
+  'TypeScript': <Code size={24} className="text-blue-400" />,
+  'MERN Stack': <Database size={24} className="text-green-500" />,
+  'Burp Suite': (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#FF6600"/>
+      <path d="M12 2L12 22" stroke="white" strokeWidth="1.5"/>
+      <path d="M22 7L2 17" stroke="white" strokeWidth="1.5"/>
+      <path d="M2 7L22 17" stroke="white" strokeWidth="1.5"/>
+    </svg>
+  ),
+  'Wireshark': (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.05882 18.9999C2.93633 17.5851 2.25 15.8649 2.25 14.0004C2.25 8.33843 6.83807 3.75037 12.5 3.75037C18.1619 3.75037 22.75 8.33843 22.75 14.0004C22.75 15.8649 22.0637 17.5851 20.9412 18.9999L12.5 6.41913V6.41913L4.05882 18.9999Z" fill="#1679A7"/>
+    </svg>
+  ),
+  'Network Miner': (
+    <svg width="24" height="24" viewBox="0 0 512 512" fill="#3498db" xmlns="http://www.w3.org/2000/svg">
+        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM128 288a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm96-128a32 32 0 1 1-64 0 32 32 0 1 1 64 0zM96 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM288 96a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm96 96a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM224 288a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm64-64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm96 64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM160 384a32 32 0 1 1 -64 0 32 32 0 1 1 64 0z"/>
+    </svg>
+  ),
+  'Autopsy': (
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="#4a4a4a" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.75,7.25H7.25a.75.75,0,0,0,0,1.5h9.5a.75.75,0,0,0,0-1.5Z"/>
+        <path d="M16.75,11.25H7.25a.75.75,0,0,0,0,1.5h9.5a.75.75,0,0,0,0-1.5Z"/>
+        <path d="M13.75,15.25H7.25a.75.75,0,0,0,0,1.5h6.5a.75.75,0,0,0,0-1.5Z"/>
+        <path d="M19,2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2ZM5,3.5A1.5,1.5,0,0,1,6.5,2h11A1.5,1.5,0,0,1,19,3.5V5H5Zm14,14A1.5,1.5,0,0,1,17.5,22h-11A1.5,1.5,0,0,1,5,20.5V6.5H19Z"/>
+    </svg>
+  ),
+  'Docker': <Box size={24} className="text-blue-600" />,
+  'Git': <GitBranch size={24} className="text-orange-600" />,
 };
 
 const skillsData = [
   {
     category: 'Development',
-    description: 'Building responsive and scalable web applications with modern technologies, focusing on clean and maintainable code.',
+    description: 'Building modern, scalable applications with a focus on clean code and robust architecture.',
     skills: [
       {
-        name: 'React & TypeScript',
+        name: 'Python',
         level: 'Intermediate',
-        reason: 'Developed several medium-scale projects using React for dynamic user interfaces and TypeScript for type-safety.'
+        reason: 'Comfortable using Python for scripting, backend development, and data analysis tasks.'
       },
       {
-        name: 'Node.js (Express)',
-        level: 'Beginner',
-        reason: 'Understand the basics of creating RESTful APIs using Express.js for backend services.'
+        name: 'React.js',
+        level: 'Intermediate',
+        reason: 'Experienced in building dynamic and responsive user interfaces for single-page applications.'
       },
-       {
-        name: 'Python (Flask)',
+      {
+        name: 'TypeScript',
+        level: 'Learning',
+        reason: 'Actively incorporating TypeScript to build more robust, type-safe applications and reduce runtime errors.'
+      },
+      {
+        name: 'MERN Stack',
         level: 'Beginner',
-        reason: 'Used Flask for smaller backend projects and rapid prototyping.'
+        reason: 'Exploring the MERN (MongoDB, Express, React, Node.js) stack to build full-stack JavaScript applications.'
       }
     ]
   },
   {
-    category: 'Security',
-    description: 'Analyzing and implementing cybersecurity best practices to protect applications from threats.',
+    category: 'Cybersecurity',
+    description: 'Applying a defensive and offensive mindset to analyze and secure digital systems.',
     skills: [
       {
-        name: 'Web Security (OWASP)',
-        level: 'Intermediate',
-        reason: 'Good understanding of the OWASP Top 10 security risks and how to mitigate them in web development.'
+        name: 'Burp Suite',
+        level: 'Beginner',
+        reason: 'Learning to use Burp Suite for web application vulnerability scanning and penetration testing.'
       },
       {
-        name: 'Network Security',
+        name: 'Network Miner',
+        level: 'Learning',
+        reason: 'Exploring Network Miner for passive network analysis and artifact extraction.'
+      },
+      {
+        name: 'Wireshark',
         level: 'Beginner',
-        reason: 'Learning the fundamental concepts of network security, including firewalls, IDS/IPS, and secure protocols.'
+        reason: 'Familiar with capturing and analyzing network traffic to troubleshoot issues and identify anomalies.'
+      },
+       {
+        name: 'Autopsy',
+        level: 'Learning',
+        reason: 'Currently learning to use Autopsy for digital forensics and in-depth file system analysis.'
+      }
+    ]
+  },
+   {
+    category: 'DevOps & Version Control',
+    description: 'Streamlining development workflows and ensuring code integrity.',
+    skills: [
+      {
+        name: 'Docker',
+        level: 'Beginner',
+        reason: 'Able to create and manage containers for consistent development and deployment environments.'
+      },
+      {
+        name: 'Git',
+        level: 'Beginner',
+        reason: 'Proficient with Git for version control, including branching, merging, and collaborating on projects.'
       }
     ]
   }
@@ -54,7 +114,6 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-100 dark:bg-[#030712] border-b border-gray-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Sticky Title */}
           <div className="lg:col-span-1">
             <div className="sticky top-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">
@@ -66,7 +125,6 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Skills List */}
           <div className="lg:col-span-2 space-y-16">
             {skillsData.map((area, index) => (
               <div key={index}>
@@ -82,8 +140,8 @@ const Skills = () => {
                       transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
                       className="flex items-start space-x-6"
                     >
-                      <div className="mt-1">
-                        {skillIcons[skill.name as keyof typeof skillIcons]}
+                      <div className="mt-1 flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                        {skillIcons[skill.name]}
                       </div>
                       <div className="flex-1">
                         <div className="flex justify-between items-baseline">
