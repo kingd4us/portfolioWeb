@@ -1,0 +1,38 @@
+# .dockerignore
+
+# Exclude dependency directories
+node_modules
+
+# Exclude build output directory
+dist
+dist-ssr
+
+# Exclude local environment files
+*.local
+
+# Exclude logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Exclude editor-specific directories and files
+.vscode
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Exclude Docker-related files from the build context
+Dockerfile
+.dockerignore
+nginx.conf
+
+# Exclude Git directory
+.git
