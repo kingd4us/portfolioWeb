@@ -1,0 +1,13 @@
+version: '3.8'
+
+# Define the services (containers) for the application
+services:
+  # The web service, which is our React application
+  web:
+    # Build the Docker image from the Dockerfile in the current directory
+    build: .
+    # Map port 8080 on the host to port 80 in the container
+    ports:
+      - "8080:80"
+    # Assign a name to the container for easier management
+    container_name: portfolio-web
