@@ -1,0 +1,13 @@
+<!-- Save this as fm-icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="FM logo">
+  <!-- Transparent background (no rect) -->
+  <title>FM icon</title>
+
+  <!-- Optional: Uncomment the next line to enable a navy background -->
+  <!-- <rect width="100%" height="100%" fill="#0b3a70"/> -->
+
+  <!-- White FM, centered. Change fill to any color you like. -->
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="260" fill="#FFFFFF" letter-spacing="-6">
+    FM
+  </text>
+</svg>
