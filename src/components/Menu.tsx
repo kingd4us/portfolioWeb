@@ -62,7 +62,7 @@ const Menu = () => {
       icon: <Download size={32} />,
       action: () =>
         window.open(
-          "https://drive.google.com/file/d/1JAHf8YQoEnRueWqIip0q8XK5dlIvw6ZK/view?usp=sharing",
+          "https://drive.google.com/file/d/17Dwt7Sn0fycud4u7O8e9ejH7vcTBX4GV/view?usp=sharing",
           "_blank",
           "noopener,noreferrer"
         ),

@@ -58,7 +58,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://drive.google.com/file/d/1JAHf8YQoEnRueWqIip0q8XK5dlIvw6ZK/view?usp=sharing"
+              href="https://drive.google.com/file/d/17Dwt7Sn0fycud4u7O8e9ejH7vcTBX4GV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-zinc-700 rounded hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors"
@@ -118,7 +118,7 @@ const Header = () => {
               </button>
               <div className="flex items-center space-x-4 pt-4">
                 <a
-                  href="https://drive.google.com/file/d/1TKvBjBmolNRnzLcbOETsvG9WBmMrZJlA/view?usp=sharing"
+                  href="https://drive.google.com/file/d/17Dwt7Sn0fycud4u7O8e9ejH7vcTBX4GV/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-zinc-700 rounded hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors"
