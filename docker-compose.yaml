@@ -1,6 +1,3 @@
-version: '3.8'
-
-# Define the services (containers) for the application
 services:
   # The web service, which is our React application
   web:

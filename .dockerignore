@@ -32,7 +32,7 @@ lerna-debug.log*
 # Exclude Docker-related files from the build context
 Dockerfile
 .dockerignore
-nginx.conf
+#nginx.conf
 
 # Exclude Git directory
 .git
