@@ -6,7 +6,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="min-h-screen flex flex-col selection:bg-foreground selection:text-background">
       <Header />
-      <main className="flex-grow w-full max-w-5xl mx-auto px-6 py-12">
+      <main className="w-full flex flex-col items-start px-4 md:px-8 pt-24">
         {children}
       </main>
       <Footer />
